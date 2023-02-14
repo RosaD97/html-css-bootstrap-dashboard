@@ -9,6 +9,7 @@
 }
 /* FINE HEADER */
 /* INIZIO MAIN */
+/* Aside Section */
 .ms_color, .ms_color_main{
     background-color: bisque;
 }
@@ -18,9 +19,8 @@
 .ms_colordue{
     background-color: violet;
 }
-@media screen and (min-width: 62rem) {
-    .ms_color{
-        width: 12.5rem;
-    }
+/* Main Section */
+.ms_main_top{
+    background-color: blue;
 }
 /* FINE MAIN */
