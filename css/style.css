@@ -1,3 +1,26 @@
-body{
-    background-color: aqua;
+/* INIZIO HEADER */
+.ms_header{
+        background-color: aquamarine;
 }
+
+.ms_height_header{
+        height: 5.625rem;
+
+}
+/* FINE HEADER */
+/* INIZIO MAIN */
+.ms_color, .ms_color_main{
+    background-color: bisque;
+}
+.ms_color{
+    height: calc(100vh - 5.625rem);
+}
+.ms_colordue{
+    background-color: violet;
+}
+@media screen and (min-width: 62rem) {
+    .ms_color{
+        width: 12.5rem;
+    }
+}
+/* FINE MAIN */
