@@ -18,6 +18,7 @@
 }
 .ms_colordue{
     background-color: violet;
+    height: calc(100vh - 5.625rem);
 }
 /* Main Section */
 .ms_main_top{
