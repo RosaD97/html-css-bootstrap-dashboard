@@ -3,21 +3,21 @@
     --
 }
 
-
-
 /* INIZIO HEADER */
 .ms_height_header{
-        height: 5.625rem;
-
+    height: 5.625rem;
 }
 /* Logo */
 .ms_logo_mobile{
-    width: 5.625rem;
+    width: 3.75rem;
 }
 /* Search */
 input.form-control{
     background-color: #e5e5e5;
-    /* box-shadow: transparent; */
+}
+.form-control:focus{
+    box-shadow: none;
+    border: 1px solid gray;
 }
 /* Nav */
 .fa-bell{
@@ -41,6 +41,29 @@ div.dropdown button.btn{
 }
 /* Main Section */
 .ms_main_top{
-    background-color: blue;
+    background-color: #1b72e8;
+    color: #fff;
+    font-size: 20px;
+}
+/* Main top */
+.ms_btn_plus{
+    padding: 0 10px;
+    font-size: 25px;
+}
+.ms_badge{
+    background-color: #165bba;
+}
+.ms_arrows{
+    vertical-align: sub;
+}
+.ms_app_section{
+    display: ruby-text;
+}
+/* Main bottom */
+.ms_avatar{
+    width: 2.5rem;
+}
+.fa-pen, .fa-trash{
+    font-size: 13px;
 }
 /* FINE MAIN */
