@@ -1,20 +1,39 @@
-/* INIZIO HEADER */
-.ms_header{
-        background-color: aquamarine;
+
+:root{
+    --
 }
 
+
+
+/* INIZIO HEADER */
 .ms_height_header{
         height: 5.625rem;
 
 }
+/* Logo */
+.ms_logo_mobile{
+    width: 5.625rem;
+}
+/* Search */
+input.form-control{
+    background-color: #e5e5e5;
+    /* box-shadow: transparent; */
+}
+/* Nav */
+.fa-bell{
+    color: #ff8f00;
+}
+div.dropdown button.btn{
+    background-color: transparent;
+}
 /* FINE HEADER */
 /* INIZIO MAIN */
 /* Aside Section */
-.ms_color, .ms_color_main{
-    background-color: bisque;
-}
-.ms_color{
+.ms_aside{
     height: calc(100vh - 5.625rem);
+    font-size: 1.25rem;
+    background-color: #051e34;
+    background-image: url(../img/sidebar-bg.png);
 }
 .ms_colordue{
     background-color: violet;
