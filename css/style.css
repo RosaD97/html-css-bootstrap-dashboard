@@ -1,7 +1,4 @@
 
-:root{
-    --
-}
 
 /* INIZIO HEADER */
 .ms_height_header{
@@ -36,7 +33,7 @@ div.dropdown button.btn{
     background-image: url(../img/sidebar-bg.png);
 }
 .ms_colordue{
-    background-color: violet;
+    background-color: #f8f9fa;
     height: calc(100vh - 5.625rem);
 }
 /* Main Section */
@@ -46,6 +43,11 @@ div.dropdown button.btn{
     font-size: 20px;
 }
 /* Main top */
+.ms_offcanvas{
+    width: 900px;
+    top: 0;
+    right: 0;
+}
 .ms_badge{
     background-color: #165bba;
 }
@@ -55,6 +57,9 @@ div.dropdown button.btn{
 .ms_app_section{
     display: ruby-text;
 }
+.ms_margin{
+    margin-right: 70px;
+}
 /* Main bottom */
 .ms_avatar{
     width: 2.5rem;
@@ -62,4 +67,23 @@ div.dropdown button.btn{
 .fa-pen, .fa-trash{
     font-size: 13px;
 }
+div.card-header{
+    background-color: #f7f7f7;
+}
 /* FINE MAIN */
+
+/* HOVER */
+.fa-pen:hover{
+    background-color: #9c9c9c;
+    color: #fff;
+    cursor: pointer;
+}
+.fa-trash:hover{
+    background-color: #9c9c9c;
+    color: #fff;
+    cursor: pointer;
+}
+.ms_hover:hover{
+    background-color: #8e9ba7;
+    cursor: pointer;
+}

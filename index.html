@@ -62,32 +62,31 @@
             <!-- Aside Section -->
             <aside class="text-light ms_aside col-auto col-md-1 p-3 d-flex flex-column ">
                 <!-- Barra Nav Aside -->
-                <nav class="d-lg-flex ms_nav_bg justify-content-lg-start">
+                <nav class="ms_nav_bg">
                     <!-- Icons -->
                     <div class="text-center">
-                        <div class="mb-lg-2">
-                            <i class="fa-solid fa-house"></i>
+                        <div class="ms_hover p-1 text-center">
+                            <i class="fa-solid fa-house pe-1"></i>
+                            <span class="d-none d-lg-inline">Home</span>
                         </div>
-                        <div class="mb-lg-2">
+                        <div class=" p-1 ms_hover">
                             <i class="fa-solid fa-chart-simple"></i>
+                            <span class="d-none d-lg-inline me-2 ms-1">Stats</span>
+
                         </div>
-                        <div class="mb-lg-2">
-                            <i class="fa-solid fa-signal"></i>
+                        <div class="mb-lg-3 p-1 ms_hover">
+                            <i class="fa-solid fa-signal pe-1"></i>
+                            <span class=" d-none d-lg-inline">Signal</span>
+
                         </div>
-                    </div>
-                    <!-- Text -->
-                    <div class="d-none d-lg-block ms-lg-3">
-                        <div class="mb-lg-2">Home</div>
-                        <div class="mb-lg-2">Stats</div>
-                        <div class="mb-lg-2">Signal</div>
                     </div>
                 </nav>
                 <!-- Admin -->
-                <div class="mt-auto d-lg-flex ms_nav_bg justify-content-lg-start">
-                    <div class="text-center">
+                <div class="mt-auto">
+                    <div class="text-center p-1 ms_hover">
                         <i class="fa-solid fa-gear"></i>
+                        <div class="d-none d-lg-inline">Admin</div>
                     </div>
-                    <div class="d-none d-lg-block ms-lg-3">Admin</div>
                 </div>
             </aside>
             <!-- Main Section -->
@@ -100,13 +99,68 @@
                         <div class="order-md-1 mb-2">
                             <span class="me-2">Nuovo Studente</span>
                             <button class="btn btn-primary border border-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-plus"></i></button>
-                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <!-- OffCanvas -->
+                            <div class="offcanvas ms_offcanvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                             <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
-                            <div class="offcanvas-body">
-                                ...
+                            <div class="overflow-auto">
+                                <div class="container-fluid">
+                                    <form class="row">
+                                        <div class="mb-3 col-12 col-md-6">
+                                        <label for="nome" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="nome" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3 col-12 col-md-6">
+                                            <label for="cognome" class="form-label">Cognome</label>
+                                            <input type="text" class="form-control" id="cognome" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3 col-12 col-md-6">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3 col-12 col-md-6">
+                                            <label for="password" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="password" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="mb-3 col-12">
+                                                <label for="indirizzo" class="form-label">Indirizzo</label>
+                                                <input type="text" class="form-control" id="indirizzo" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="mb-3 col-12 col-md-6">
+                                                <label for="citta" class="form-label">Città</label>
+                                                <input type="text" class="form-control" id="citta" aria-describedby="emailHelp">
+                                            </div>
+                                            
+                                            <div class=" mb-3 col-12 col-md-4">
+                                                <label for="inputGroupSelect02" class="form-label">Paese</label>
+                                                <select class="form-select" id="inputGroupSelect02">
+                                                <option selected>Scegli...</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3 col-12 col-md-2">
+                                                <label for="cap" class="form-label">CAP</label>
+                                                <input type="text" class="form-control" id="cap" aria-describedby="emailHelp">
+                                                </div>
+                                                <div>Foto</div>
+                                                <div class="input-group mb-3 col-12">
+                                                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">Scegli file</button>
+                                                    <input type="text" class="form-control" placeholder="Nessun file selezionato" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                                </div>     
+                                    </form>
+                                </div>
+                                <div class="form-check ms-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                    Seleziona per proseguire
+                                    </label>
+                                </div>   
+                                <button type="button" class="btn btn-primary ms-3">Salva</button>
+                                <input class="btn btn-warning" type="reset" value="Svuota">
                             </div>
                             </div>
                         </div>
@@ -126,8 +180,8 @@
                             </div>
                         </div>
                         <!-- Studenti -->
-                        <div class="mb-2 ">
-                            <span class="fs-6">Studenti online negli ultimi 30 minuti</span>
+                        <div class="mb-2">
+                            <span class="fs-6 pe-3">Studenti online negli ultimi 30 minuti</span>
                             <div class="fs-2">125</div>
                         </div>
                     </div>
@@ -156,16 +210,16 @@
                                         <!-- Riga Classe -->
                                         <div class="card-body row border-0 border-bottom">
                                             <div class="col-6 col-md-5 col-lg-6 text-start">
-                                                <span><img class="ms_avatar" src="img/class-avatar.jpg" alt="avatar img"> </span>
+                                                <span><img class="ms_avatar" src="img/class-avatar.png" alt="avatar img"> </span>
                                                 <div class="d-md-inline ms-md-2">Classe 75</div>
                                             </div>
                                             <div class="col-6 col-md-7 col-lg-6 d-flex justify-content-between">
-                                                <span class="d-none d-md-inline fw-semibold">15 Feb 2021</span>
-                                                <span class="d-none d-md-inline fw-semibold">20%</span>
+                                                <span class="d-none d-md-inline">15 Feb 2021</span>
+                                                <span class="d-none d-md-inline">20%</span>
                                                 <span class="fw-semibold">
                                                     <span class="badge text-bg-success">Done</span>
                                                 </span>
-                                                <span class="fw-semibold">
+                                                <span>
                                                     <i class="fa-solid fa-pen rounded p-2 border border-dark-subtle"></i>
                                                     <i class="fa-solid fa-trash rounded p-2 border border-dark-subtle"></i>
                                                 </span>
@@ -174,16 +228,16 @@
                                         <!-- Riga Classe -->
                                         <div class="card-body row border-0 border-bottom">
                                             <div class="col-6 col-md-5 col-lg-6 text-start">
-                                                <span><img class="ms_avatar" src="img/class-avatar.jpg" alt="avatar img"> </span>
+                                                <span><img class="ms_avatar" src="img/class-avatar.png" alt="avatar img"> </span>
                                                 <div class="d-md-inline ms-md-2">Classe 76</div>
                                             </div>
                                             <div class="col-6 col-md-7 col-lg-6 d-flex justify-content-between">
-                                                <span class="d-none d-md-inline fw-semibold">15 Feb 2021</span>
-                                                <span class="d-none d-md-inline fw-semibold">20%</span>
+                                                <span class="d-none d-md-inline">16 Feb 2021</span>
+                                                <span class="d-none d-md-inline">20%</span>
                                                 <span class="fw-semibold">
                                                     <span class="badge text-bg-success">Done</span>
                                                 </span>
-                                                <span class="fw-semibold">
+                                                <span>
                                                     <i class="fa-solid fa-pen rounded p-2 border border-dark-subtle"></i>
                                                     <i class="fa-solid fa-trash rounded p-2 border border-dark-subtle"></i>
                                                 </span>
@@ -192,16 +246,16 @@
                                         <!-- Riga Classe -->
                                         <div class="card-body row border-0 border-bottom">
                                             <div class="col-6 col-md-5 col-lg-6 text-start">
-                                                <span><img class="ms_avatar" src="img/class-avatar.jpg" alt="avatar img"> </span>
-                                                <div class="d-md-inline ms-md-2">Classe 75</div>
+                                                <span><img class="ms_avatar" src="img/class-avatar.png" alt="avatar img"> </span>
+                                                <div class="d-md-inline ms-md-2">Classe 77</div>
                                             </div>
                                             <div class="col-6 col-md-7 col-lg-6 d-flex justify-content-between">
-                                                <span class="d-none d-md-inline fw-semibold">15 Feb 2021</span>
-                                                <span class="d-none d-md-inline fw-semibold">20%</span>
+                                                <span class="d-none d-md-inline">17 Feb 2021</span>
+                                                <span class="d-none d-md-inline">20%</span>
                                                 <span class="fw-semibold">
-                                                    <span class="badge text-bg-success">Done</span>
+                                                    <span class="badge text-bg-warning text-white">process</span>
                                                 </span>
-                                                <span class="fw-semibold">
+                                                <span>
                                                     <i class="fa-solid fa-pen rounded p-2 border border-dark-subtle"></i>
                                                     <i class="fa-solid fa-trash rounded p-2 border border-dark-subtle"></i>
                                                 </span>
@@ -210,16 +264,16 @@
                                         <!-- Riga Classe -->
                                         <div class="card-body row border-0 border-bottom">
                                             <div class="col-6 col-md-5 col-lg-6 text-start">
-                                                <span><img class="ms_avatar" src="img/class-avatar.jpg" alt="avatar img"> </span>
-                                                <div class="d-md-inline ms-md-2">Classe 75</div>
+                                                <span><img class="ms_avatar" src="img/class-avatar.png" alt="avatar img"> </span>
+                                                <div class="d-md-inline ms-md-2">Classe 78</div>
                                             </div>
                                             <div class="col-6 col-md-7 col-lg-6 d-flex justify-content-between">
-                                                <span class="d-none d-md-inline fw-semibold">15 Feb 2021</span>
-                                                <span class="d-none d-md-inline fw-semibold">20%</span>
+                                                <span class="d-none d-md-inline">18 Feb 2021</span>
+                                                <span class="d-none d-md-inline">20%</span>
                                                 <span class="fw-semibold">
                                                     <span class="badge text-bg-success">Done</span>
                                                 </span>
-                                                <span class="fw-semibold">
+                                                <span>
                                                     <i class="fa-solid fa-pen rounded p-2 border border-dark-subtle"></i>
                                                     <i class="fa-solid fa-trash rounded p-2 border border-dark-subtle"></i>
                                                 </span>
@@ -228,16 +282,16 @@
                                         <!-- Riga Classe -->
                                         <div class="card-body row border-0 border-bottom">
                                             <div class="col-6 col-md-5 col-lg-6 text-start">
-                                                <span><img class="ms_avatar" src="img/class-avatar.jpg" alt="avatar img"> </span>
-                                                <div class="d-md-inline ms-md-2">Classe 75</div>
+                                                <span><img class="ms_avatar" src="img/class-avatar.png" alt="avatar img"> </span>
+                                                <div class="d-md-inline ms-md-2">Classe 79</div>
                                             </div>
                                             <div class="col-6 col-md-7 col-lg-6 d-flex justify-content-between">
-                                                <span class="d-none d-md-inline fw-semibold">15 Feb 2021</span>
-                                                <span class="d-none d-md-inline fw-semibold">20%</span>
+                                                <span class="d-none d-md-inline">19 Feb 2021</span>
+                                                <span class="d-none d-md-inline">20%</span>
                                                 <span class="fw-semibold">
-                                                    <span class="badge text-bg-success">Done</span>
+                                                    <span class="badge text-bg-danger">failed</span>
                                                 </span>
-                                                <span class="fw-semibold">
+                                                <span>
                                                     <i class="fa-solid fa-pen rounded p-2 border border-dark-subtle"></i>
                                                     <i class="fa-solid fa-trash rounded p-2 border border-dark-subtle"></i>
                                                 </span>
@@ -246,16 +300,16 @@
                                         <!-- Riga Classe -->
                                         <div class="card-body row border-0 border-bottom">
                                             <div class="col-6 col-md-5 col-lg-6 text-start">
-                                                <span><img class="ms_avatar" src="img/class-avatar.jpg" alt="avatar img"> </span>
-                                                <div class="d-md-inline ms-md-2">Classe 75</div>
+                                                <span><img class="ms_avatar" src="img/class-avatar.png" alt="avatar img"> </span>
+                                                <div class="d-md-inline ms-md-2">Classe 80</div>
                                             </div>
                                             <div class="col-6 col-md-7 col-lg-6 d-flex justify-content-between">
-                                                <span class="d-none d-md-inline fw-semibold">15 Feb 2021</span>
-                                                <span class="d-none d-md-inline fw-semibold">20%</span>
+                                                <span class="d-none d-md-inline">20 Feb 2021</span>
+                                                <span class="d-none d-md-inline">20%</span>
                                                 <span class="fw-semibold">
                                                     <span class="badge text-bg-success">Done</span>
                                                 </span>
-                                                <span class="fw-semibold">
+                                                <span>
                                                     <i class="fa-solid fa-pen rounded p-2 border border-dark-subtle"></i>
                                                     <i class="fa-solid fa-trash rounded p-2 border border-dark-subtle"></i>
                                                 </span>
@@ -264,21 +318,39 @@
                                         <!-- Riga Classe -->
                                         <div class="card-body row border-0 border-bottom">
                                             <div class="col-6 col-md-5 col-lg-6 text-start">
-                                                <span><img class="ms_avatar" src="img/class-avatar.jpg" alt="avatar img"> </span>
-                                                <div class="d-md-inline ms-md-2">Classe 75</div>
+                                                <span><img class="ms_avatar" src="img/class-avatar.png" alt="avatar img"> </span>
+                                                <div class="d-md-inline ms-md-2">Classe 81</div>
                                             </div>
                                             <div class="col-6 col-md-7 col-lg-6 d-flex justify-content-between">
-                                                <span class="d-none d-md-inline fw-semibold">15 Feb 2021</span>
-                                                <span class="d-none d-md-inline fw-semibold">20%</span>
+                                                <span class="d-none d-md-inline">21 Feb 2021</span>
+                                                <span class="d-none d-md-inline">20%</span>
                                                 <span class="fw-semibold">
-                                                    <span class="badge text-bg-success">Done</span>
+                                                    <span class="badge text-bg-danger">failed</span>
                                                 </span>
-                                                <span class="fw-semibold">
+                                                <span>
                                                     <i class="fa-solid fa-pen rounded p-2 border border-dark-subtle"></i>
                                                     <i class="fa-solid fa-trash rounded p-2 border border-dark-subtle"></i>
                                                 </span>
                                             </div>
                                         </div>
+                                         <!-- Riga Classe -->
+                                         <div class="card-body row border-0 border-bottom">
+                                            <div class="col-6 col-md-5 col-lg-6 text-start">
+                                                <span><img class="ms_avatar" src="img/class-avatar.png" alt="avatar img"> </span>
+                                                <div class="d-md-inline ms-md-2">Classe 82</div>
+                                            </div>
+                                            <div class="col-6 col-md-7 col-lg-6 d-flex justify-content-between">
+                                                <span class="d-none d-md-inline">22 Feb 2021</span>
+                                                <span class="d-none d-md-inline">20%</span>
+                                                <span class="fw-semibold">
+                                                    <span class="badge text-bg-success">Done</span>
+                                                </span>
+                                                <span>
+                                                    <i class="fa-solid fa-pen rounded p-2 border border-dark-subtle"></i>
+                                                    <i class="fa-solid fa-trash rounded p-2 border border-dark-subtle"></i>
+                                                </span>
+                                            </div>
+                                        </div>                                       
                                     </div>
                               </div>
                         </div>
@@ -292,7 +364,7 @@
                                     <div class="accordion-item border-0 border-bottom">
                                       <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                          Accordion Item #1
+                                        Come aggiungere un nuovo studente?
                                         </button>
                                       </h2>
                                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -304,7 +376,7 @@
                                     <div class="accordion-item border-0 border-bottom">
                                       <h2 class="accordion-header" id="headingTwo">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                          Accordion Item #2
+                                            Come posso accedere alle informazioni del mio account?
                                         </button>
                                       </h2>
                                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -316,7 +388,7 @@
                                     <div class="accordion-item border-0">
                                       <h2 class="accordion-header" id="headingThree">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                          Accordion Item #3
+                                          Posso usare questa dashboard da mobile?
                                         </button>
                                       </h2>
                                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -385,7 +457,8 @@
 
     <!-- Footer -->
     <footer>
-        <section></section>
+        <section>
+        </section>
     </footer>
     <!-- /Footer -->
 
